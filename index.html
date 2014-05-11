@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
+
  <head>
+
 <title>Trying out D3 maps</title>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
-
+<script src="http://datamaps.github.io/scripts/datamaps.usa.min.js"></script>
 
  </head>
+
 <body>
 
-<script>
 <div id="arcs" style="position: relative; width: 640px; height: 360px;"></div>
 
+<script>
 <var arcs = new Datamap({
   element: document.getElementById("arcs"),
   scope: 'usa',
