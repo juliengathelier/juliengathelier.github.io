@@ -1,6 +1,6 @@
 from flask import Flask
 app = Flask("François Hollande API")
-@app.route("/")
+@app.route("http://juliengathelier.github.io/")
 
 
 def hello():
