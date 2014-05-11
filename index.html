@@ -5,10 +5,7 @@
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
-
-</head>
-<body>
-	<div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+<div id="container" style="position: relative; width: 500px; height: 300px;"></div>
 	<script>
     var map = new Datamap({element: document.getElementById('container')});
     var arcs = new Datamap({
@@ -66,6 +63,9 @@ arcs.arc([
 ],  {strokeWidth: 1, arcSharpness: 1.4});
     });
 </script>
+
+</head>
+<body>
 <p></p>
 <p>This is where my application is going to be</p>
 <p>© Julien Gathelier </p>
