@@ -2,9 +2,20 @@
 <html>
 <head>
 	<title>François Hollande's public calendar</title>
-	<% src="app.py" %>
 </head>
 <body>
+	<% from flask import Flask
+app = Flask("François Hollande API")
+@app.route("http://juliengathelier.github.io/")
+
+
+def hello():
+    
+    return "Hello World"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
+     %>
 <p></p>
 <p>This is where my application is going to be</p>
 <p>© Julien Gathelier </p>
