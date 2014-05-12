@@ -24,13 +24,6 @@
 var arcs = new Datamap({
   element: document.getElementById("arcs"),
   projection: 'mercator',
-  geographyConfig: {
-    highlightBorderColor: '#1a1a1a',
-   popupTemplate: function(geography, data) {
-  return '<div class="hoverinfo">' + geography.properties.name + ' 
-Official visit' +  data.date + ' '
-   }
-},
   fills: {
     defaultFill: "#bada55",
     home: "#f75b68",
@@ -39,7 +32,7 @@ Official visit' +  data.date + ' '
 
   data: {
     'FRA': { fillKey: 'home'},
-    'USA': { fillKey: 'visit', "date": on 2014-02-11},
+    'USA': { fillKey: 'visit' },
     'DEU': { fillKey: 'visit' },
     'MEX': { fillKey: 'visit' },
     'BEL': { fillKey: 'visit' },
