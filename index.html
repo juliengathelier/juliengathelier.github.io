@@ -26,10 +26,10 @@ var arcs = new Datamap({
   projection: 'mercator',
   geographyConfig: {
   highlightBorderColor: '#1a1a1a',
-   popupTemplate: function(geography, data) {
+  popupTemplate: function(geography, data) {
       return '<div class="hoverinfo">' + geography.properties.name + ' 
 Official visit' +  data.date + ' '
-    },
+  },
   fills: {
     defaultFill: "#bada55",
     home: "#f75b68",
