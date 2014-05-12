@@ -20,13 +20,12 @@
 <div id ="arcs" style="position: relative; width: 1000px; height: 600px;"> </div>
 <script>
 
-
 var arcs = new Datamap({
-  element: document.getElementById("arcs"),
-  projection: 'mercator',
-  geographyConfig: {
-  highlightBorderColor: '#1a1a1a',
-  popupTemplate: function(geography, data) {
+element: document.getElementById("arcs"),
+projection: 'mercator',
+geographyConfig: {
+highlightBorderColor: '#1a1a1a',
+ popupTemplate: function(geography, data) {
       return '<div class="hoverinfo">' + geography.properties.name + ' 
 Official visit' +  data.date + ' '
   },
