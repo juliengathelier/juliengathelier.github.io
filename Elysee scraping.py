@@ -74,7 +74,7 @@ while True:
         link = "http://www.elysee.fr/"+nextlink["href"]
         print link
         
-        #sleep(random.randrange(0,1))
+        sleep(random.randrange(0,1))
         connection = urlopen(link)
         data = connection.read()
         page = BeautifulSoup(data)
