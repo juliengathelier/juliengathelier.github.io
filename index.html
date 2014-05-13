@@ -174,16 +174,21 @@ arcs.arc([
 </script>
 
 <p>The arcs show the exact locations where he has travelled. The data comes from a calendar of official appointments which is publicly available on the french presidency's website in a <a href="http://www.elysee.fr/chronologie/download/json">json</a> or <a href="http://www.elysee.fr/chronologie/download/xml"> xml </a> format.</p> 
-<P>To obtain the latitude and longitude I geocoded the places contained in that dataset using geopandas and the Google Maps API. The map is generated using D3.js and Data Maps. Because I had to do it manually, I only vizualised his first 10 visits abroad.</p>
+<P>To obtain the latitude and longitude I geocoded the places contained in that dataset using geopandas and the Google Maps API. The map is generated using D3.js and <a href="http://datamaps.github.io/">Data Maps</a>. Because I had to do it manually, I only vizualised his first 10 visits abroad.</p>
 
 
-<H3>This shows how many appointments François Hollande had per day.</H3>
+<H3>This graphic shows how many appointments François Hollande had per day over the course of his presidency</H3>
 
 <img src='http://54.86.184.36:9800/frequency'; width=1080px; height=540px>
 
-<p>These data were obtained by scraping the calendar that he has on his website. The code to do that can be found here.</p>
+<p>These data were obtained by scraping the public calendar that he has on his website.</p>
+<p>Other fun facts about his schedule as of May 12th 2014:</p> 
+<ul>
+<li>his busiest day since the beginning of his presidency was July 25th 2013. He had 16 meetings that day.</li>
+<li>He has 4.13 appointements per day on average.</li>
+<li>His favorite time to meet is 10am.</li>
 
-<H3>This shows the percentage of men and women of the total amount of people he met with </H3>
+<H3>This graphic shows the percentage of men and women of the total amount of people he met with </H3>
 <img src='http://54.86.184.36:9800/gender'; width=700px; height=700px>
 
 <H3>The sausage:</H3>
