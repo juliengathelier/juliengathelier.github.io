@@ -10,16 +10,17 @@
 
  </head>
 <body>
+<div id="wrap">
 
   <H1>Scraping François Hollande's calendar</H1>
 
   <H3>This map shows François Hollande's travels abroad</H3>
 
 <style>
-H1{margin-left: 20%;}
-H3{margin-left:20%;
-margin-bottom: 30px;
-margin-top: 30px;}
+#wrap { 
+  width: 900px; 
+  margin: 0 auto; 
+}
 </style>
 
 <div id ="arcs" style="position: relative; width: 1000px; height: 600px;"> </div>
@@ -147,7 +148,8 @@ arcs.arc([
 <p></p>
 
 <H3>This shows how many appointments he had per day.</H3>
-<img src='http://54.86.184.36:9800/frequency'>
+<img src='http://54.86.184.36:9800/frequency'; width=1000px; height=600px>
+</div>
 </body>
 <p>© Julien Gathelier </p>
 </body>
