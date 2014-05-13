@@ -167,9 +167,11 @@ arcs.arc([
 
 </script>
 
-<p>The arcs show where he has travelled</p>
+<p>The arcs show the exact locations where he has travelled. The data comes from a calendar of official appointments which is publicly available on the french presidency's website in a <link href="http://www.elysee.fr/chronologie/download/json">json</link> or <link href="http://www.elysee.fr/chronologie/download/xml"> xml </link> format.</p> 
+<P>To obtain the latitude and longitude I geocoded the places contained in that dataset using geopandas and the Google Maps API. The map is generated using D3.js and Data Maps. Because I had to do it manually, I have only vizualised his first 10 visits abroad.</p>
 
-<H3>This shows how many appointments he had per day.</H3>
+
+<H3>This shows how many appointments François Hollande had per day.</H3>
 <img src='http://54.86.184.36:9800/frequency'; width=1000px; height=500px>
 <p>These data were obtained by scraping the calendar that he has on his website. The code to do that can be found here.</p>
 
