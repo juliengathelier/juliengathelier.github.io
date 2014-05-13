@@ -15,8 +15,13 @@
 <style>
 
 #wrap { 
-  width: 800px; 
+  width: 1080px; 
   margin: 0 auto; 
+}
+
+#arcs{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 H1{
@@ -51,7 +56,7 @@ ul{
 
 <H3>This map shows François Hollande's travels abroad</H3>
 
-<div id ="arcs" style="position: relative; width: 800px; height: 400px;"> </div>
+<div id ="arcs" style="position: relative; width: 1000px; height: 600px;"> </div>
 
 <script>
 
@@ -180,7 +185,7 @@ arcs.arc([
 
 <H3>This graphic shows how many appointments François Hollande had per day over the course of his presidency:</H3>
 
-<img src='http://54.86.184.36:9800/frequency'; width=800px; height=400px>
+<img src='http://54.86.184.36:9800/frequency'; width=1000px; height=400px>
 
 <p>These data were obtained by scraping the public calendar that he has on his website.</p>
 <p>Other fun facts about his schedule as of May 12th 2014:</p> 
@@ -191,7 +196,7 @@ arcs.arc([
 </ul>
 
 <H3>This graphic shows the percentage of men and women of the total amount of people he met with </H3>
-<img src='http://54.86.184.36:9800/gender'; width=800px; height=800px>
+<img src='http://54.86.184.36:9800/gender'; width=600px; height=600px>
 
 <p>After scraping the calendar I parsed the data by using regular expressions.</p>
 <p>Other fun facts about the people he met with as of May 12th 2014:</p> 
@@ -207,6 +212,6 @@ arcs.arc([
           <li>My code for the scraper and the APIs can be found <a href="https://github.com/juliengathelier/juliengathelier.github.io/blob/master/Elysee%20scraping.py">here</a>.</li>
        </ul>
 </div>
-<p>© <a href="juliengathelier.com"></a>Julien Gathelier </p>
+<p>© <a href="juliengathelier.com">Julien Gathelier</a> </p>
 </body>
 </html>
