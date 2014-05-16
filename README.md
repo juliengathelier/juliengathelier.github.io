@@ -1,7 +1,7 @@
 Visualizing François Hollande's calendar
 ----------------------------------------
 
-<a>juliengathelier.github.io</a>
+<a>www.juliengathelier.github.io</a>
 
 
 
