@@ -4,7 +4,7 @@
 
 <head>
 
-<title>François Hollande's calendar</title>
+<title>Les voyages de François Hollande</title>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="http://datamaps.github.io/scripts/datamaps.world.min.js"></script>
@@ -57,7 +57,7 @@ ul{
 
 <div id="wrap">
 
-<H1>Visualizing François Hollande's calendar</H1>
+<H1>Les voyages officiels de François Hollande</H1>
 
 <H3>This map shows François Hollande's travels abroad</H3>
 
@@ -184,86 +184,14 @@ arcs.arc([
 
 </script>
 
-<p>The arcs show the exact locations where he has travelled. The data comes from a calendar of official appointments which is publicly available on the french presidency's website in a <a href="http://www.elysee.fr/chronologie/download/json">json</a> or <a href="http://www.elysee.fr/chronologie/download/xml"> xml </a> format.</p> 
-<P>To obtain the latitude and longitude I geocoded the places contained in that dataset using geopandas and the Google Maps API. The map is generated using D3.js and <a href="http://datamaps.github.io/">Data Maps</a>. Because I had to do it manually, I only vizualised his first 10 visits abroad.</p>
+<p>Les arcs les endroits où le président s'est déplacé. Les données proviennent du calendrier officiel de François Hollande, disponible sur le site de l'Élysée. <a href="http://www.elysee.fr/chronologie/download/json">json</a> or <a href="http://www.elysee.fr/chronologie/download/xml"> xml </a> format.</p> 
+<P>Pour obtenir les coordonnées exactes je me suis servi de la librairie python Geopandas et de l'API Google Maps. La carte est générée à partir de D3.js et <a href="http://datamaps.github.io/">Data Maps</a>.</p>
 
-
-<H3>This graphic shows how many appointments François Hollande had per day over the course of his presidency:</H3>
-
-<img src='http://54.86.184.36:9800/frequency'; width=1000px; height=400px>
-
-<p>These data were obtained by scraping the public calendar that he has on his website.</p>
-<p>Other fun facts about his schedule as of May 12th 2014:</p> 
-<ul>
-<li>His busiest day since the beginning of his presidency was July 25th 2013. He had 16 meetings that day.</li>
-<li>He has 4.13 appointements per day on average.</li>
-<li>His favorite time to meet is 10am.</li>
-</ul>
-
-<H3>This graphic shows the percentage of men and women of the total amount of people he met with </H3>
-<img src='http://54.86.184.36:9800/gender'; width=600px; height=600px>
-
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
-var width = 960,
-    height = 500,
-    radius = Math.min(width, height) / 2;
-
-var color = d3.scale.ordinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-var arc = d3.svg.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(0);
-
-var pie = d3.layout.pie()
-    .sort(null)
-    .value(function(d) { return d.number; });
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-d3.csv("data.csv", function(error, data) {
-
-  data.forEach(function(d) {
-    d.number = +d.number;
-  });
-
-  var g = svg.selectAll(".arc")
-      .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
-
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.gender); });
-
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.data.gender; });
-
-});
-
-</script>
-
-<p>After scraping the calendar I parsed the data by using regular expressions.</p>
-<p>Other fun facts about the people he met with as of May 12th 2014:</p> 
-<ul>
-<li>The person he has met the most is his former prime minister Jean-Marc Ayrault.</li>
-<li>Since he made Manuel Valls prime minister earlier this year, François Hollande has had lunch with him 5 times. The two men never officialy had lunch together before that.</li>
-</ul>
 
 <H3>The sausage:</H3>
        <ul>
           <li>My code for this website can be found <a href="https://github.com/juliengathelier/juliengathelier.github.io/blob/master/index.html">here</a>.</li>
-          <li>My code for geocoding François Hollande's visits can be found <a href="https://github.com/juliengathelier/Gathering-data-about-Fran-ois-Hollande-s-schedule/blob/master/Elysee%20scraping.py">here</a>.</li>
-          <li>My code for the scraper and the APIs can be found <a href="https://github.com/juliengathelier/juliengathelier.github.io/blob/master/Elysee%20scraping.py">here</a>.</li>
+        
        </ul>
 <p>© <a href="http://www.juliengathelier.com">Julien Gathelier</a> </p>
 </div>
