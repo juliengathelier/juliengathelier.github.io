@@ -1,7 +1,7 @@
-Visualizing François Hollande's calendar
+KP name generator prototype
 ----------------------------------------
 
-<a>www.juliengathelier.github.io</a>
+<a>www.kpnamegenerator.github.io</a>
 
 
 
