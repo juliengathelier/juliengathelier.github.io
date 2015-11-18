@@ -1,7 +1,7 @@
 KP name generator prototype
 ----------------------------------------
 
-<a>www.kpnamegenerator.github.io</a>
+<a>www.juliengathelier.github.io</a>
 
 
 
